@@ -33,7 +33,7 @@
         <artifactId>wildfly-swarm-plugin</artifactId>
         <version>${version.wildfly.swarm}</version>
         <configuration>
-          <mainClass>com.example.rest.RestApplication</mainClass>
+          <mainClass>com.reciclarteprototipo.rest.RestApplication</mainClass>
         </configuration>
         <executions>
           <execution>
@@ -58,7 +58,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-clean-plugin</artifactId>
-        <version>2.5</version>
+        <version>3.1.0</version>
         <executions>
           <execution>
             <id>clean-jar-artifacts</id>
@@ -78,6 +78,18 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <version>3.1.0</version>
+            <executions>
+                <execution>
+                    <id>copy-dependencies</id>
+                    <phase>package</phase>
+                    <goals><goal>copy-dependencies</goal></goals>
+                </execution>
+            </executions>
+        </plugin>
     </plugins>
   </build>
 
@@ -105,39 +117,6 @@
     <dependency>
       <groupId>org.wildfly.swarm</groupId>
       <artifactId>jpa-postgresql</artifactId>
-    </dependency>
-    <dependency>
-    	<groupId>org.jboss.shrinkwrap</groupId>
-    	<artifactId>shrinkwrap-api</artifactId>
-    </dependency>
-    <dependency>
-    	<groupId>org.jboss.shrinkwrap</groupId>
-    	<artifactId>shrinkwrap-impl-base</artifactId>
-    </dependency>
-    <dependency>
-    	<groupId>org.jboss.shrinkwrap</groupId>
-    	<artifactId>shrinkwrap-spi</artifactId>
-    </dependency>
-    <dependency>
-    	<groupId>org.jboss.shrinkwrap.descriptors</groupId>
-    	<artifactId>shrinkwrap-descriptors-api-base</artifactId>
-    </dependency>
-    <dependency>
-    	<groupId>org.jboss.shrinkwrap.descriptors</groupId>
-    	<artifactId>shrinkwrap-descriptors-api-javaee</artifactId>
-    </dependency>
-    <dependency>
-    	<groupId>org.jboss.shrinkwrap.descriptors</groupId>
-    	<artifactId>shrinkwrap-descriptors-api-jboss</artifactId>
-    </dependency>
-    <dependency>
-    	<groupId>org.jboss.shrinkwrap.descriptors</groupId>
-    	<artifactId>shrinkwrap-descriptors-spi</artifactId>
-    </dependency>
-    <dependency>
-    	<groupId>org.jboss.shrinkwrap</groupId>
-    	<artifactId>shrinkwrap-extension-classloader</artifactId>
-    	<version>1.0.0-alpha-11</version>
     </dependency>
   </dependencies>
 </project>
