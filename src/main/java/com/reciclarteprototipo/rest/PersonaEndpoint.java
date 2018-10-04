@@ -1,5 +1,6 @@
 package com.reciclarteprototipo.rest;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -9,6 +10,8 @@ import javax.ws.rs.core.MediaType;
 
 import com.reciclarteprototipo.entities.Persona;
 
+@Path("/personas")
+@ApplicationScoped
 public class PersonaEndpoint {
 	@GET
 	@Path("/")

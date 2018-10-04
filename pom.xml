@@ -12,7 +12,7 @@
     <failOnMissingWebXml>false</failOnMissingWebXml>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-
+  
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -40,6 +40,21 @@
             <goals><goal>package</goal></goals>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+      <!-- Build an executable JAR -->
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-jar-plugin</artifactId>
+      <version>3.1.0</version>
+      <configuration>
+        <archive>
+          <manifest>
+            <addClasspath>true</addClasspath>
+            <classpathPrefix>lib/</classpathPrefix>
+            <mainClass>com.reciclarteprototipo.rest.RestApplication</mainClass>
+          </manifest>
+        </archive>
+      </configuration>
       </plugin>
       <plugin>
         <artifactId>maven-clean-plugin</artifactId>
