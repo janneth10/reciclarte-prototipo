@@ -12,7 +12,8 @@ public class RestApplication {
 		container.start();
 		JAXRSArchive deployment=ShrinkWrap.create(JAXRSArchive.class);
 		deployment.addClasses(Persona.class);
-		deployment.addResource(PersonaEndpoint.class);
+		deployment.addResource(BienvenidoEndpoint.class);
+		deployment.addResource(PersonaEndpoint.class);		
 		deployment.addAllDependencies();
 		container.deploy(deployment);
 	}
