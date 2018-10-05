@@ -22,6 +22,11 @@
         <scope>import</scope>
         <type>pom</type>
       </dependency>
+      <dependency>
+      	<groupId>javax</groupId>
+      	<artifactId>javaee-api</artifactId>
+      	<version>7.0</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
@@ -98,7 +103,6 @@
     <dependency>
       <groupId>javax</groupId>
       <artifactId>javaee-api</artifactId>
-      <version>7.0</version>
       <scope>provided</scope>
     </dependency>
     <!-- Wildfly Swarm Fractions -->
