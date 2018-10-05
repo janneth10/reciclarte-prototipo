@@ -1,0 +1,7 @@
+{
+  "name": "ReciclARTE Prototipo",
+  "description": "La aplicacion ReciclARTE usando JBoss Wildfly Swarm usando JAX-RS.",
+  "website": "http://reciclarte-prototipo.io/",
+  "success_url": "/",
+  "addons": [ "heroku-postgresql" ]
+}
