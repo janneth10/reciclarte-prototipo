@@ -18,7 +18,7 @@ public class PersonaEndpoint {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Persona[] all() {
 		return new Persona[] {new Persona(1,"Daniel"),new Persona(2,"Janneth")
-				,new Persona(3,"Carolina")};
+				,new Persona(3,"Carolina"), new Persona(4, "Yhorman")};
 	}
 	
 	@POST
