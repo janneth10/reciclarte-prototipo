@@ -1,0 +1,4 @@
+com\reciclarteprototipo\rest\BienvenidoEndpoint.class
+com\reciclarteprototipo\rest\PersonaEndpoint.class
+com\reciclarteprototipo\rest\RestApplication.class
+com\reciclarteprototipo\entities\Persona.class
